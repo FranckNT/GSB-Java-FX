@@ -1,0 +1,109 @@
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="503.0" prefWidth="854.0"
+            style="-fx-background-color: #fff;" xmlns="http://javafx.com/javafx/8"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="controller.LoginController">
+    <children>
+
+        <!-- Partie gauche -->
+        <AnchorPane prefHeight="503.0" prefWidth="382.0" style="-fx-background-color: #223494;"
+                    stylesheets="@../css/fullpackstyling.css"
+                    AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <children>
+                <ImageView fitHeight="106.0" fitWidth="194.0" layoutX="100.0" layoutY="146.0"
+                           pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../../images/logo_GSB.jpg" />
+                    </image>
+                </ImageView>
+                <Label alignment="CENTER" layoutX="71.0" layoutY="262.0"
+                       prefHeight="23.0" prefWidth="223.0" text="GSB" textFill="WHITE">
+                    <font>
+                        <Font name="Segoe UI Bold" size="30.0" />
+                    </font>
+                </Label>
+                <Label alignment="CENTER" layoutX="89.0" layoutY="295.0"
+                       prefHeight="23.0" prefWidth="205.0" text="BTS SIO 2ème année" textFill="WHITE">
+                    <font>
+                        <Font name="Segoe UI Bold Italic" size="12.0" />
+                    </font>
+                </Label>
+            </children>
+        </AnchorPane>
+
+        <!-- Partie droite -->
+        <Pane layoutX="488.0" layoutY="100.0" AnchorPane.bottomAnchor="73.0" AnchorPane.topAnchor="100.0">
+            <children>
+                <TextField fx:id="txtUsername" layoutX="7.0" prefHeight="34.0"
+                           prefWidth="275.0" promptText="identifiant ou mail">
+                    <font>
+                        <Font name="System Bold" size="18.0" />
+                    </font>
+                </TextField>
+                <PasswordField fx:id="txtPassword" layoutX="7.0" layoutY="61.0"
+                               prefHeight="34.0" prefWidth="275.0" promptText="mot de passe">
+                    <font>
+                        <Font name="System Bold" size="18.0" />
+                    </font>
+                </PasswordField>
+                <Button fx:id="btnFB" layoutX="4.0" layoutY="115.0"
+                        mnemonicParsing="false" prefHeight="34.0" prefWidth="275.0"
+                        style="-fx-background-color: #263ea2;" text="Se connecter avec Facebook" textFill="WHITE">
+                    <graphic>
+                        <ImageView fitHeight="26.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../../images/icons8_Facebook_F_48px.png" />
+                            </image>
+                        </ImageView>
+                    </graphic>
+                    <font>
+                        <Font name="System Bold Italic" size="12.0" />
+                    </font>
+                </Button>
+                <Button fx:id="btnSignUp" layoutX="4.0" layoutY="159.0"
+                        mnemonicParsing="false" prefHeight="34.0" prefWidth="275.0"
+                        style="-fx-background-color: #00ab66;" text="S'inscrire">
+                    <font>
+                        <Font name="System Bold Italic" size="12.0" />
+                    </font>
+                </Button>
+                <Button fx:id="btnLogin" layoutX="4.0" layoutY="203.0"
+                        mnemonicParsing="false" prefHeight="34.0" prefWidth="275.0"
+                        onAction="#handleLogin" text="Connexion">
+                    <font>
+                        <Font name="System Bold" size="12.0" />
+                    </font>
+                </Button>
+                <Label fx:id="lblMessage" layoutX="7.0" layoutY="150.0" textFill="RED" />
+            </children>
+        </Pane>
+
+        <!-- Labels bas -->
+        <Pane>
+            <children>
+                <Label alignment="CENTER" layoutX="394.0" layoutY="466.0"
+                       prefHeight="23.0" prefWidth="120.0" text="Design by Balbali" textFill="#5b5a5a"
+                       AnchorPane.bottomAnchor="14.0">
+                    <font>
+                        <Font name="Segoe UI Bold" size="12.0"/>
+                    </font>
+                </Label>
+                <Label alignment="CENTER" layoutX="747.0" layoutY="466.0"
+                       prefHeight="23.0" prefWidth="130.0" text="Télécharger App" textFill="#a8b1ec"
+                       AnchorPane.bottomAnchor="14.0">
+                    <font>
+                        <Font name="Segoe UI Bold" size="12.0"/>
+                    </font>
+                </Label>
+            </children>
+        </Pane>
+
+    </children>
+</AnchorPane>
